@@ -1,0 +1,12 @@
+{
+    "products": [
+        {"id": 1, "name": "Nike Air Max", "category": "shoes", "price": 129.99, "icon": "👟"},
+        {"id": 2, "name": "Adidas Ultraboost", "category": "shoes", "price": 159.99, "icon": "👟"},
+        {"id": 3, "name": "Puma Suede Classic", "category": "shoes", "price": 79.99, "icon": "👞"},
+        {"id": 4, "name": "Premium Cotton T-Shirt", "category": "clothes", "price": 29.99, "icon": "👕"},
+        {"id": 5, "name": "Slim Fit Jeans", "category": "clothes", "price": 59.99, "icon": "👖"},
+        {"id": 6, "name": "Hoodie Sweatshirt", "category": "clothes", "price": 49.99, "icon": "🧥"},
+        {"id": 7, "name": "Running Sneakers", "category": "shoes", "price": 99.99, "icon": "👟"},
+        {"id": 8, "name": "Leather Jacket", "category": "clothes", "price": 199.99, "icon": "🧥"}
+    ]
+}

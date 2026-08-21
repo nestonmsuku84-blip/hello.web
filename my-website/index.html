@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoleStyle | Premium Shoes & Clothes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-shoe-prints"></i>
+                <span>Mkushi Fashion Store</span>
+                <small>vaa vizuri pendeza na mimi</small>
+            </div>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCounter">0</span>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Step Into <span class="highlight">Style</span></h1>
+                <p>Discover the perfect brand of comfort and fashion</p>
+            </div>
+        </section>
+
+        <!-- Category Filters -->
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All Items</button>
+            <button class="filter-btn" data-category="shoes">👟 Shoes</button>
+            <button class="filter-btn" data-category="clothes">👕 Clothes</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsContainer"></div>
+
+        <!-- Cart Sidebar -->
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+                <button class="close-cart" id="closeCartBtn">&times;</button>
+            </div>
+            <div class="cart-items-list" id="cartItemsList">
+                <div class="empty-cart">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout <i class="fas fa-arrow-right"></i></button>
+                <small class="secure-badge"><i class="fas fa-lock"></i> Secure transaction</small>
+            </div>
+        </div>
+
+        <!-- Checkout Form Modal (Customer Info) -->
+        <div class="modal" id="checkoutFormModal">
+            <div class="modal-content" style="max-width: 500px;">
+                <h2 style="margin-bottom: 20px; color: #2c3e50;"><i class="fas fa-user-check"></i> Customer Information</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="customerName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="customerEmail" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="customerPhone" required placeholder="+1 234 567 8900">
+                    </div>
+                    <div class="form-group">
+                        <label>Shipping Address *</label>
+                        <textarea id="customerAddress" required rows="3" placeholder="Street, City, State, Zip Code"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <select id="paymentMethod">
+                            <option value="credit_card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="cash_on_delivery">Cash on Delivery</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" id="cancelCheckoutBtn">Cancel</button>
+                        <button type="submit" class="submit-order-btn">Place Order <i class="fas fa-check"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Order Success Modal -->
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h2>Order Confirmed! 🎉</h2>
+                <p id="orderSuccessMessage">Thank you for your purchase. Your items will be shipped soon.</p>
+                <button class="modal-btn" id="modalCloseBtn">Continue Shopping</button>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
